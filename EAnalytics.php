@@ -9,7 +9,7 @@
  */
 class EAnalytics extends CApplicationComponent
 {
-	public $options = array();
+	public $providers = array();
 
 	public $lowerBounceRate = false;
 	
@@ -19,17 +19,17 @@ class EAnalytics extends CApplicationComponent
 	public function init()
 	{
 		// Set the alias path
-		if (Yii::getPathOfAlias('EAnalytics') === false)
-            Yii::setPathOfAlias('EAnalytics', realpath(dirname(__FILE__) . '/..'));
+		if (Yii::getPathOfAlias('analytics') === false)
+            Yii::setPathOfAlias('analytics', realpath(dirname(__FILE__) . '/..'));
 
         parent::init();
 
 		// Don't load up the analytics.js if we don't have any data
-		if (empty($this->options))
+		if (empty($this->getProviders()))
 			return;
 
 		// Conver options into json
-		$json = CJSON::encode($this->options);
+		$json = CJSON::encode($this->getProviders());
 
 		// Load up the asset manager
 		$asset = Yii::app()->assetManager->publish(YiiBase::getPathOfAlias('ext.analyticsjs.assets.js'), true, -1, YII_DEBUG);
@@ -48,5 +48,15 @@ class EAnalytics extends CApplicationComponent
 			$cs->registerScript('analytics.js-bounce-rate-60', 'setTimeout(function() { analytics.track("_trackEvent", "60 Seconds"); }, 60000 );');
 		}
 
+	}
+
+	/**
+	 * getProviders provides us with the providers that we want to use.
+	 * This method is implemented so that we can overload it via class extension 
+	 * @return array
+	 */
+	public function getProviders()
+	{
+		return $this->providers
 	}
 }
