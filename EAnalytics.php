@@ -57,6 +57,6 @@ class EAnalytics extends CApplicationComponent
 	 */
 	public function getProviders()
 	{
-		return $this->providers
+		return $this->providers;
 	}
 }
