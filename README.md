@@ -5,7 +5,7 @@ EAnalytics is a [Yii Framework](www.yiiframework.com) wrapper for [Analytics.js 
 
 ## Configuring
 
-Add the following to your config/main.php:
+Clone the repository to your extensions folder and add the following to your config/main.php:
 
     'preload' => array('EAnalytics'),
 	'components' => array(
