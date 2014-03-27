@@ -32,7 +32,7 @@ class EAnalytics extends CApplicationComponent
 		$json = CJSON::encode($this->getProviders());
 
 		// Load up the asset manager
-		$asset = Yii::app()->assetManager->publish(YiiBase::getPathOfAlias('ext.EAnalytics.assets.js'), true, -1, YII_DEBUG);
+		$asset = Yii::app()->assetManager->publish(__DIR__.DS.'assets'.DS.'js', true, -1, YII_DEBUG);
 		$cs    = Yii::app()->getClientScript();
 
 		// Register the appropriate script file
