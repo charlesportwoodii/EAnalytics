@@ -2,6 +2,12 @@
 
 EAnalytics is a [Yii Framework](www.yiiframework.com) wrapper for [Analytics.js Library](https://github.com/segment.io/analytics.js). Rather than loading in a dozen different extensions for each analytics service you want to use, this extension allows you to specify various tracking providers in a single config file and call various methods via a single interface.
 
+## Installation
+EAnalytics can be installed via ```composer```. Add the following to your ```composer.json``` ```require``` section.
+
+	"charlesportwoodii/eanalytics": "dev-master"
+
+Then run ```composer update```
 
 ## Configuring
 
