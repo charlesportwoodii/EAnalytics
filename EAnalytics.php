@@ -29,11 +29,12 @@ class EAnalytics extends CApplicationComponent
         parent::init();
 
 		// Don't load up the analytics.js if we don't have any data
-		if (empty($this->getProviders()))
+		$providers = $this->getProviders();
+		if (empty($providers))
 			return;
 
 		// Conver options into json
-		$json = CJSON::encode($this->getProviders());
+		$json = CJSON::encode($providers);
 
 		// Load up the asset manager
 		$asset = Yii::app()->assetManager->publish(__DIR__.DS.'assets'.DS.'js', true, -1, YII_DEBUG);
