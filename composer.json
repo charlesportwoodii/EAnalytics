@@ -17,5 +17,11 @@
     "support": {
         "issues": "https://github.com/charlesportwoodii/EAnalytics/issues",
         "source": "https://github.com/charlesportwoodii/EAnalytics"
+    },
+    "autoload": {
+        "classmap": ["EAnalytics.php"],
+        "psr-0": {
+            "Detection": "namespaced/"
+        }
     }
 }
