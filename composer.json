@@ -1,0 +1,20 @@
+{
+    "name": "charlesportwoodii/EAnalytics",
+    "description": "EAnalytics is a Analytics.js wrapper for Yii Framework",
+    "type": "library",
+    "keywords": ["analytics", "analytics.js"],
+    "homepage": "https://github.com/charlesportwoodii/EAnalytics",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charles R. Portwood II",
+            "email": "charlesportwoodii@ethreal.net",
+            "homepage": "https://www.erianna.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/charlesportwoodii/EAnalytics/issues",
+        "source": "https://github.com/charlesportwoodii/EAnalytics"
+    }
+}
