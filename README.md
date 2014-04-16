@@ -5,7 +5,7 @@ EAnalytics is a [Yii Framework](www.yiiframework.com) wrapper for [Analytics.js 
 ## Installation
 EAnalytics can be installed via ```composer```. Add the following to your ```composer.json``` ```require``` section.
 
-	"charlesportwoodii/eanalytics": "dev-master"
+	"charlesportwoodii/eanalytics": "1.0.2"
 
 Then run ```composer update```
 
