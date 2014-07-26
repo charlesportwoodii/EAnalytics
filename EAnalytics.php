@@ -44,7 +44,7 @@ class EAnalytics extends CApplicationComponent
 		$cs->registerScriptFile($asset . (YII_DEBUG ? '/analytics.js' : '/analytics.min.js'));
 
 		// Initialize
-		$cs->registerScript('analytics.js', "analytics.initialize({$json});");
+		$cs->registerScript('analytics.js', "analytics.initialize({$json}); analytics.page();");
 
 		if ($this->lowerBounceRate)
 		{
