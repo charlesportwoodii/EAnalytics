@@ -11782,7 +11782,7 @@ var GA = exports.Integration = integration('Google Analytics')
   .option('enhancedLinkAttribution', false)
   .option('ignoredReferrers', null)
   .option('includeSearch', false)
-  .option('siteSpeedSampleRate', 1)
+  .option('siteSpeedSampleRate', null)
   .option('trackingId', '')
   .option('trackNamedPages', true)
   .option('trackCategorizedPages', true)
@@ -11825,11 +11825,7 @@ GA.prototype.initialize = function(){
   };
   window.ga.l = new Date().getTime();
 
-  window.ga('create', opts.trackingId, {
-    cookieDomain: opts.domain || GA.prototype.defaults.domain, // to protect against empty string
-    siteSpeedSampleRate: opts.siteSpeedSampleRate,
-    allowLinker: true
-  });
+  window.ga('create', opts.trackingId, 'auto');
 
   // display advertising
   if (opts.doubleClick) {
